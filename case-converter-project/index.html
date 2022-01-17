@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case Converter</title>
+</head>
+<body>
+<div class="title">Case Converter</div>
+<textarea cols="30" id="my-text" name="my-text" rows="10"></textarea>
+<button id="upper-case">Upper Case</button>
+<button id="lower-case">Lower Case</button>
+<button id="proper-case">Proper Case</button>
+<button id="sentence-case">Sentence Case</button>
+<button id="save-text-file">Save Text File</button>
+</body>
+<script>
+  document.getElementById("upper-case").addEventListener("click", function () {
+    document.getElementById("my-text").value = document.getElementById("my-text").value.toUpperCase();
+  });
+
+  document.getElementById("lower-case").addEventListener("click", function () {
+    document.getElementById("my-text").value = document.getElementById("my-text").value.toLowerCase();
+  });
+
+  document.getElementById("proper-case").addEventListener("click", function () {
+    let text = document.getElementById("my-text").value;
+    let splitedWords = text.split(" ");
+
+    let splitedUpperCaseWords = splitedWords.map(x => x.replace(x.charAt(0), x.charAt(0).toUpperCase()));
+    document.getElementById("my-text").value = splitedUpperCaseWords.join(" ");
+  });
+
+  document.getElementById("sentence-case").addEventListener("click", function () {
+    let text = document.getElementById("my-text").value;
+    text = text.toLowerCase();
+    let splitedSentences = text.split(/\.\s/);
+
+    let splitedUpperCaseSentences = splitedSentences.map(x => x.replace(x.charAt(0), x.charAt(0).toUpperCase()));
+    document.getElementById("my-text").value = splitedUpperCaseSentences.join(". ");
+  });
+
+  function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+
+  document.getElementById("save-text-file").addEventListener("click", function () {
+    // Start file download.
+    download("text.txt", document.getElementById("my-text").value);
+  });
+</script>
+</body>
+</html>

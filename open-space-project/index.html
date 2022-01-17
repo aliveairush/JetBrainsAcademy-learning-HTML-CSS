@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Piano</title>
+  <link href="index.css" rel="stylesheet">
+  <script defer src="index.js"></script>
+</head>
+<body>
+<div class="space">
+  <div class="planet-area">
+    <img alt="" class="planet" src="images/mars.png">
+    <img alt="" class="rocket" id="rocket" src="images/rocket.png">
+
+  </div>
+  <div class="control-panel">
+    <div class="control-panel__inner">
+      <input class="password-input" id="password-input-field" placeholder="Password" type="password" value="TrustNo1">
+      <input class="btn password-btn" id="password-submit-btn" type="button" value="ok">
+      <div class="check-buttons">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+        <input class="checkbox-security-check security-check" disabled onchange="myListener()" type="checkbox">
+      </div>
+      <div class="levers">
+        <input class="range-security-check security-check" disabled onchange="myListener()" type="range">
+        <input class="range-security-check security-check" disabled onchange="myListener()" type="range">
+        <input class="range-security-check security-check" disabled onchange="myListener()" type="range">
+        <input class="range-security-check security-check" disabled onchange="myListener()" type="range">
+        <input class="range-security-check security-check" disabled onchange="myListener()" type="range">
+      </div>
+      <input class="btn launch-btn" disabled id="launch-btn" onclick="rocketLaunch()" type="button" value="LAUNCH">
+    </div>
+  </div>
+</div>
+</body>
+</html>

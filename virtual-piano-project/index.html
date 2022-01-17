@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Piano</title>
+  <link href="index.css" rel="stylesheet"/>
+  <script defer>
+    document.addEventListener("keypress", function (event) {
+      let keys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'w', 'e', 't', 'y', 'u'];
+      const k = event.key;
+      if (keys.includes(k)) {
+        console.log(`The '${k}' key is pressed`);
+        let audio = new Audio("keys/" + k.toUpperCase() + ".mp3");
+        audio.play();
+      }
+      else {
+        console.warn("What are you doing son")
+      }
+    });
+  </script>
+</head>
+<body>
+<div class="title">
+  <div class="container">
+    <div class="black-keys">
+      <kbd class="kw">W</kbd>
+      <kbd class="ke">E</kbd>
+      <kbd class="kt">T</kbd>
+      <kbd class="ky">Y</kbd>
+      <kbd class="ku">U</kbd>
+    </div>
+    <div class="white-keys">
+      <kbd>A</kbd>
+      <kbd>S</kbd>
+      <kbd>D</kbd>
+      <kbd>F</kbd>
+      <kbd>G</kbd>
+      <kbd>H</kbd>
+      <kbd>J</kbd>
+    </div>
+
+  </div>
+</body>
+</html>

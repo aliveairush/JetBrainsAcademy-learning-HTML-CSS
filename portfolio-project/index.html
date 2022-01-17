@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="index.css" rel="stylesheet">
+  <meta content="width=device-width, user-scalable=no" name="viewport"/>
+</head>
+<body>
+<div class="window" id="flashcards-popup">
+  <h1>Flashcards</h1>
+  <h4>Link not ready yet</h4>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. </p>
+  <button id="flashcards-popup-close">Close</button>
+</div>
+
+<div class="window" id="piano-popup">
+  <h1>Piano</h1>
+  <h4>Link not ready yet</h4>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book. </p>
+  <button id="piano-popup-close">Close</button>
+</div>
+
+<div class="hamburger">
+  <button class="icon" id="hamburger-button">
+    <img alt="hambuger" src="images/hamburger.svg">
+  </button>
+  <div class="hamburger-menu">
+    <button class="icon" id="close-side-bar-button">
+      <img alt="" src="images/close_icon.svg">
+    </button>
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <header class="header">
+    <nav class="header__nav">
+      <a href="#about">About me</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contacts">Contacts</a>
+      <a class="active" href="#">Home</a>
+    </nav>
+    <div class="header__main">
+      <h1 class="header__title">Samuel Jackson. Artist</h1>
+    </div>
+  </header>
+  <div class="main">
+    <section id="about">
+      <div class="about-images">
+        <img alt="" class="about-images__bg" src="images/image.jpg">
+        <img alt="Samuel Jackson" class="about-images__avatar" src="images/img.png">
+      </div>
+      <div class="about-info">
+        <h2 class="about__title">About me</h2>
+        <p>Samuel Leroy Jackson (born December 21, 1948) is an American actor and producer. Widely regarded as
+          one
+          of
+          the most popular actors of his generation, the films in which he has appeared have collectively
+          grossed
+          over
+          $27 billion worldwide </p>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="portfolio__title">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="portfolio-cards">
+        <div class="portfolio-card">
+          <button class="open-window" id="flashcards">See proj</button>
+          <img alt="project 1" class="portfolio-card__image" src="images/project1.png">
+          <h4 class="portfolio-card__title">Flashcards</h4>
+        </div>
+        <div class="portfolio-card">
+          <button class="open-window" id="piano">See proj</button>
+          <img alt="project 1" class="portfolio-card__image" src="images/project2.png">
+          <h4 class="portfolio-card__title">Piano</h4>
+        </div>
+      </div>
+
+    </section>
+    <section id="contacts">
+      <h2 class="contacts__title">Contacts</h2>
+      <p>You can contact me through <a href="tel: +78005553535">+78005553535</a>.</p>
+      <div class="contacts-icons">
+        <img alt="Facebook" src="images/facebook.svg">
+        <img alt="Github" src="images/github.svg">
+        <img alt="Instagram" src="images/instagram.svg">
+        <img alt="Twitter" src="images/twitter.svg">
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <h1>JetBrains</h1>
+    <h4>2021</h4>
+  </footer>
+</div>
+<script>
+
+  document.getElementById('hamburger-button').addEventListener('click', function () {
+    document.querySelector(".hamburger-menu").classList.toggle('active')
+  });
+
+
+  document.getElementById('close-side-bar-button').addEventListener('click', function () {
+    document.querySelector(".hamburger-menu").classList.toggle('active')
+  });
+
+
+  document.getElementById("flashcards").addEventListener("click", function () {
+    document.querySelector("#flashcards-popup").style.display = document.querySelector("#flashcards-popup").style.display === "flex" ? "none" : "flex";
+  });
+
+  document.getElementById("flashcards-popup-close").addEventListener('click', function () {
+    document.querySelector("#flashcards-popup").style.display = document.querySelector("#flashcards-popup").style.display === "flex" ? "none" : "flex";
+  })
+
+  document.getElementById("piano").addEventListener("click", function () {
+    document.querySelector("#piano-popup").style.display = document.querySelector("#piano-popup").style.display === "flex" ? "none" : "flex";
+  });
+
+  document.getElementById("piano-popup-close").addEventListener('click', function () {
+    document.querySelector("#piano-popup").style.display = document.querySelector("#piano-popup").style.display === "flex" ? "none" : "flex";
+  });
+</script>
+</body>
+</html>

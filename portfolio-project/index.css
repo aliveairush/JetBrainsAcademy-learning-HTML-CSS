@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 245, 248);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background-color: black;
+    min-height: 100px;
+}
+
+.main{
+    background-color: inherit;
+}
+
+/*nav*/
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 100%;
+    min-height: 70px;
+    background: black;
+}
+
+.hamburger .icon {
+    background-color: inherit;
+    margin: 15px ;
+    border: none;
+    width: 35px;
+}
+.hamburger .icon  img{
+    border-radius: 5px;
+    width: 35px;
+    background-color: inherit;
+}
+
+
+.hamburger-menu{
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+
+    width: 200px;
+    background-color: #ccd1d2;
+}
+
+.hamburger-menu ul {
+    padding: 0 20px 20px 20px;
+    list-style: none;
+
+}
+
+.hamburger-menu ul li {
+    margin-bottom: 10px;
+}
+
+.hamburger-menu ul li a{
+    text-decoration: none;
+    color: #555555;
+}
+
+.active.hamburger-menu {
+    transform: translateX(0%);
+    transition: transform 0.5s;
+}
+
+@media (max-width: 900px) {
+    .hamburger{
+        display: initial;
+    }
+}
+
+/* header */
+.header__nav{
+
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 900px) {
+    .header__nav{
+        display: none;
+    }
+}
+
+.header__nav a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 70px;
+    color: white;
+}
+
+.header__nav a.active{
+    background-color: rgb(204, 209, 210);
+    color: black;
+}
+
+.header__main{
+    background-image: url("images/bg.jpg");
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__title {
+    padding-bottom: 50px;
+    padding-left: 100px;
+    color: white;
+}
+
+/* about */
+#about {
+    background-color: rgb(204, 209, 210);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 70px;
+}
+
+.about-images{
+    position: relative;
+    max-width: 400px;
+
+}
+.about-images__bg{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/0.7;
+    padding-bottom: 15px;
+
+}
+
+.about-images__avatar{
+    position: absolute;
+    width: 50%;
+    aspect-ratio: 1/1.4;
+    object-fit: cover;
+    top: 10%;
+    left: 60%;
+}
+
+.about-info{
+    width: 400px;
+}
+
+.about__title {
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+/*portfolio*/
+#portfolio {
+}
+
+.portfolio-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.portfolio__title {
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 20px 0;
+}
+
+.portfolio-card{
+    width: 50%;
+    background-color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-card__image {
+    width: 100%;
+    padding: 20px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.portfolio-card__title {
+    font-size: 24px;
+}
+
+.portfolio-card__btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+
+}
+
+/* contacts */
+#contacts {
+    margin-top: 70px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contacts__title{
+    padding: 50px 0 20px 0;
+    font-size: 24px;
+}
+.contacts-icons{
+    padding: 20px 0 50px 0;
+}
+.contacts-icons > img{
+    opacity: 0.4;
+    color: gray;
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    margin: 0 3px;
+}
+
+/*footer*/
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 40px 0 60px 0;
+}
+
+
+/* Pop up window */
+.window {
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    display: none;
+    gap: 15px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 5vh;
+    max-width: 70vw;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    z-index: 100;
+    color: gray;
+}
+
+.window button,
+.open-window{
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 25px;
+}
+
+.window h1 {
+    color: #555;
+}

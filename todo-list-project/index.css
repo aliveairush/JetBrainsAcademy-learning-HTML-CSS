@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#input-task {
+    border: none;
+    border-bottom: rgb(128, 128, 128) 3px solid ;
+    width: 300px;
+    font-size: inherit;
+}
+#input-task:focus,
+#input-task:active {
+    outline: none;
+}
+#input-task::placeholder {
+    color: rgb(197, 186, 216);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#add-task-button {
+    padding: 10px 20px;
+    margin: 0 0 0 10px;
+    background-color: rgb(197, 186, 216);
+    color: white;
+    border: none;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0 8px;
+    border-radius: 50%;
+}

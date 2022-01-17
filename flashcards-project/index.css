@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    background-color: white;
+}
+
+body {
+    background-color: white;
+    max-width: 700px;
+    margin: auto;
+    font-family: "Roboto", serif;
+}
+
+.cards {
+    background-color: rgb(80, 80, 80);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+
+.cards-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.cards-content {
+    /* For 3d effect */
+    /*perspective: 1000px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    perspective: 1000px;
+}
+
+.card > div {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    /*aspect-ratio: 1/1;*/
+    border-radius: 30px;
+    position: relative;
+
+    transition: transform 1s linear;
+    transform-style: preserve-3d;
+}
+
+.card > div:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.card-front {
+    background-color: rgb(244, 236, 225);
+    color: rgb(221, 147, 80);
+    z-index: 2;
+    /* Need to add to parent element transform-style: preserve-3d */
+    backface-visibility: hidden;
+
+}
+
+.card-back {
+    background-color: rgb(225, 123, 47);
+    color: white;
+    z-index: 1;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+}

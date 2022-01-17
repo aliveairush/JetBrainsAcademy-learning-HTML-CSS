@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.btn {
+    padding: 3px 15px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #0a6fff;
+    color: white;
+}
+
+.btn[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.space {
+    background-image: url("images/space.png");
+    min-height: 100vh;
+}
+
+.planet-area {
+    position: absolute;
+    bottom: 0;
+
+}
+
+.planet {
+    width: 400px;
+    position: relative;
+    z-index: 2;
+}
+
+.rocket {
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    bottom: 170px;
+    transition: transform 2s cubic-bezier(0.95, 0.09, 0.76, 1), rotate 1s;
+    transform: rotate(20deg);
+}
+
+.fly{
+
+    transform: translate(400px, -100vh) rotate(30deg);;
+}
+
+.control-panel {
+    background: linear-gradient(
+            150deg, #1f283d -50%, #555555 50%, #1f283d 100%);
+    /*width: 900px;*/
+    /*height: 900px;*/
+}
+
+.control-panel__inner {
+    background: inherit;
+    border: 3px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    width: 40%;
+}
+
+.password-input {
+    background-color: #dae5e8;
+    border: 3px solid #c4c4c4;
+    border-radius: 7px;
+    margin: 20px 20px 0 20px;
+    padding: 10px;
+    color: #0046ff;
+
+}
+
+.password-input::placeholder {
+    padding-left: 10px;
+}
+
+.password-btn {
+    margin: 10px 0;
+}
+
+.check-buttons {
+    background-color: #dae5e8;
+    border-radius: 7px;
+    margin: 10px 20px 0 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    min-width: 80%;
+}
+
+.levers {
+    min-width: 80%;
+    background-color: #fcf9ff;
+    border-radius: 7px;
+    margin: 10px 20px 0 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.levers input {
+    width: 10px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+}
+
+.launch-panel {
+
+    justify-content: center;
+    display: flex;
+}
+
+.launch-btn {
+    margin: 20px 0 10px 0;
+    max-width: fit-content;
+}
